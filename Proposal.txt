@@ -2,6 +2,6 @@
 2. item 1, item 2
 3. item 1/item 2
 	a. id, name, serial number, more or less depending
-4. print out list of all inventory or just for item 1 or item 2
+4. print out list of all inventory or just for item 1 or item 2.
 
 	
