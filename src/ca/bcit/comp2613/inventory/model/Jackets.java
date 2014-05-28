@@ -12,6 +12,10 @@ public class Jackets {
 	private String id;
 	private String jacketName;
 	private String jacketColour;
+	
+	public Jackets(){
+		
+	}
 
 	public Jackets(String id, String jacketName, String jacketColour) {
 		super();
@@ -41,8 +45,8 @@ public class Jackets {
 
 	@Override
 	public String toString() {
-		return "Jackets [id=" + id + ", jacketName=" + jacketName
-				+ ", jacketColour=" + jacketColour + "]";
+		return "[ id = " + id + ", Jacket Name = " + jacketName
+				+ ", Jacket Colour = " + jacketColour + " ]";
 	}
 
 
