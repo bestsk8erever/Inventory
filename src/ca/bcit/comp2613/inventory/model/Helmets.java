@@ -13,11 +13,19 @@ public class Helmets {
 	private String helModelName;
 	
 	// serial numbers 12-34, int if 1234
-	private String serialNumber;
+	private String helmetColour;
 	
 	public Helmets(){
 		
 	}
+	
+	public Helmets(String id, String helModelName, String helmetColour) {
+		super();
+		this.id = id;
+		this.helModelName = helModelName;
+		this.helmetColour = helmetColour;
+	}
+	
 	
 	public String getId() {
 		return id;
@@ -35,18 +43,18 @@ public class Helmets {
 		this.helModelName = helModelName;
 	}
 
-	public String getSerialNumber() {
-		return serialNumber;
+	public String getHelmetColour() {
+		return helmetColour;
 	}
 
-	public void setSerialNumber(String serialNumber) {
-		this.serialNumber = serialNumber;
+	public void setHelmetColour(String helmetColour) {
+		this.helmetColour = helmetColour;
 	}
 
 	@Override
 	public String toString() {
-		return "Helmets [id=" + id + ", helModelName=" + helModelName
-				+ ", serialNumber=" + serialNumber + "]";
+		return "[ id = " + id + ", Helmet Name = " + helModelName
+				+ ", Helmet Colour = " + helmetColour + " ]";
 	}
 
 

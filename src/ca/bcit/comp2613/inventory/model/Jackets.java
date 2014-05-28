@@ -8,13 +8,42 @@ package ca.bcit.comp2613.inventory.model;
  *
  */
 public class Jackets {
+	
+	private String id;
+	private String jacketName;
+	private String jacketColour;
 
-	/**
-	 * @param args
-	 */
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	public Jackets(String id, String jacketName, String jacketColour) {
+		super();
+		this.id = id;
+		this.jacketName = jacketName;
+		this.jacketColour = jacketColour;
 	}
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getJacketName() {
+		return jacketName;
+	}
+	public void setJacketName(String jacketName) {
+		this.jacketName = jacketName;
+	}
+	public String getJacketColour() {
+		return jacketColour;
+	}
+	public void setJacketColour(String jacketColour) {
+		this.jacketColour = jacketColour;
+	}
+
+	@Override
+	public String toString() {
+		return "Jackets [id=" + id + ", jacketName=" + jacketName
+				+ ", jacketColour=" + jacketColour + "]";
+	}
+
 
 }
