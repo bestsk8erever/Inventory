@@ -2,7 +2,7 @@ package ca.bcit.comp2613.inventory.util;
 
 import java.util.ArrayList;
 
-import ca.bcit.comp2613.inventory.model.Jackets;
+import ca.bcit.comp2613.inventory.model.Jacket;
 
 public class JacketUtil {
 	
@@ -17,12 +17,12 @@ public class JacketUtil {
 			+ "Name81 Name82 Name83 Name84 Name85 Name86 Name87 Name88 Name89 Name90 "
 			+ "Name91 Name92 Name93 Name94 Name95 Name96 Name97 Name98 Name99 Name100";
 
-	public static ArrayList<Jackets> createJackets() {
-		ArrayList<Jackets> retval = new ArrayList<>();
+	public static ArrayList<Jacket> createJackets() {
+		ArrayList<Jacket> retval = new ArrayList<>();
 		String[] strs = JACKET_NAMES.split("\\s");
 		// create loop
 		for (int i = 0; i < strs.length; i++) {
-			Jackets jacket = new Jackets();
+			Jacket jacket = new Jacket();
 			jacket.setId(Integer.toString(i));
 			jacket.setJacketName(strs[i].toUpperCase());
 			jacket.setJacketColour(new StringBuilder(strs[i]).reverse().toString());
@@ -32,16 +32,16 @@ public class JacketUtil {
 	}
 	
 
-	public static void printJackets(ArrayList<Jackets> jackets) {
-		for (Jackets jacket : jackets) {
+	public static void printJackets(ArrayList<Jacket> jackets) {
+		for (Jacket jacket : jackets) {
 			System.out.println(jacket);
 		}
 	}
 
-	public static ArrayList<Jackets> searchJacketByName(ArrayList<Jackets> jackets, 
+	public static ArrayList<Jacket> searchJacketByName(ArrayList<Jacket> jackets, 
 			String jacketName) {
-		ArrayList<Jackets> retval = new ArrayList<>();
-		for (Jackets jacket : jackets) {
+		ArrayList<Jacket> retval = new ArrayList<>();
+		for (Jacket jacket : jackets) {
 			if (jacket.getJacketName().equals(jacketName)) {
 				retval.add(jacket);
 			}
@@ -49,10 +49,10 @@ public class JacketUtil {
 		return retval;
 	}
 
-	public static ArrayList<Jackets> searchJacketByNameRegex(
-			ArrayList<Jackets> jackets, String regex) {
-		ArrayList<Jackets> retval = new ArrayList<>();
-		for (Jackets jacket : jackets) {
+	public static ArrayList<Jacket> searchJacketByNameRegex(
+			ArrayList<Jacket> jackets, String regex) {
+		ArrayList<Jacket> retval = new ArrayList<>();
+		for (Jacket jacket : jackets) {
 			 if (jacket.getJacketName().matches(regex)) {
 				 System.out.println(jacket);
 			 }

@@ -7,17 +7,17 @@ package ca.bcit.comp2613.inventory.model;
  * @author Andrew
  *
  */
-public class Jackets {
+public class Jacket {
 	
 	private String id;
 	private String jacketName;
 	private String jacketColour;
 	
-	public Jackets(){
+	public Jacket(){
 		
 	}
 
-	public Jackets(String id, String jacketName, String jacketColour) {
+	public Jacket(String id, String jacketName, String jacketColour) {
 		super();
 		this.id = id;
 		this.jacketName = jacketName;

@@ -2,7 +2,7 @@ package ca.bcit.comp2613.inventory.util;
 
 import java.util.ArrayList;
 
-import ca.bcit.comp2613.inventory.model.Helmets;
+import ca.bcit.comp2613.inventory.model.Helmet;
 
 public class HelmetUtil {
 	
@@ -17,31 +17,53 @@ public class HelmetUtil {
 			+ "Name81 Name82 Name83 Name84 Name85 Name86 Name87 Name88 Name89 Name90 "
 			+ "Name91 Name92 Name93 Name94 Name95 Name96 Name97 Name98 Name99 Name100";
 
-	public static ArrayList<Helmets> createHelmets() {
-		ArrayList<Helmets> retval = new ArrayList<>();
+	public static ArrayList<Helmet> createHelmets() {
+		ArrayList<Helmet> retval = new ArrayList<>();
 		String[] strs = HELMET_NAMES.split("\\s");
+	//	Helmet.Size[] helmets = { Helmet.Size.SMALL, Helmet.Size.MEDIUM, Helmet.Size.LARGE };
+	//	int countOfSizes = 0;
+		
+		
 		// create loop
 		for (int i = 0; i < strs.length; i++) {
-			Helmets helmet = new Helmets();
+			Helmet helmet = new Helmet();
 			helmet.setId(Integer.toString(i));
 			helmet.setHelModelName(strs[i].toUpperCase());
 			helmet.setHelmetColour(new StringBuilder(strs[i]).reverse().toString());
 			retval.add(helmet);
+//			Helmet.Size helmetSize = helmets[i];
+//			if (helmetSize == Helmet.Size.SMALL) {
+//				countOfSizes++;
+//			}
+			
 		}
+	//	checkSizesEquals (helmets);
 		return retval;
+		
 	}
 	
+//	private static void checkSizesEquals(Helmet.Size[] helmets) {
+//		int countOfSizes = 0;
+//		for (int i = 0; i < helmets.length; i++) {
+//			Helmet.Size helmet = helmets[i];
+//			if (helmet.equals(Helmet.Size.SMALL)){
+//				countOfSizes++;
+//			}
+//		}
+//		System.out.println(countOfSizes);
+//		System.out.println(Helmet.Size.SMALL);
+//	}
 
-	public static void printHelmets(ArrayList<Helmets> helmets) {
-		for (Helmets helmet : helmets) {
+	public static void printHelmets(ArrayList<Helmet> helmets) {
+		for (Helmet helmet : helmets) {
 			System.out.println(helmet);
 		}
 	}
 
-	public static ArrayList<Helmets> searchHelmetByName(ArrayList<Helmets> helmets, 
+	public static ArrayList<Helmet> searchHelmetByName(ArrayList<Helmet> helmets, 
 			String helModelName) {
-		ArrayList<Helmets> retval = new ArrayList<>();
-		for (Helmets helmet : helmets) {
+		ArrayList<Helmet> retval = new ArrayList<>();
+		for (Helmet helmet : helmets) {
 			if (helmet.getHelModelName().equals(helModelName)) {
 				retval.add(helmet);
 			}
@@ -49,10 +71,10 @@ public class HelmetUtil {
 		return retval;
 	}
 
-	public static ArrayList<Helmets> searchHelmetByNameRegex(
-			ArrayList<Helmets> helmets, String regex) {
-		ArrayList<Helmets> retval = new ArrayList<>();
-		for (Helmets helmet : helmets) {
+	public static ArrayList<Helmet> searchHelmetByNameRegex(
+			ArrayList<Helmet> helmets, String regex) {
+		ArrayList<Helmet> retval = new ArrayList<>();
+		for (Helmet helmet : helmets) {
 			 if (helmet.getHelModelName().matches(regex)) {
 				 System.out.println(helmet);
 			 }

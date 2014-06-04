@@ -5,14 +5,14 @@ package ca.bcit.comp2613.inventory;
 
 import java.util.ArrayList;
 
-import ca.bcit.comp2613.inventory.model.Jackets;
+import ca.bcit.comp2613.inventory.model.Jacket;
 import ca.bcit.comp2613.inventory.util.JacketUtil;
 
 /**
  * @author Andrew
  *
  */
-public class JacketCreate {
+public class JacketDriver {
 
 	/**
 	 * @param args
@@ -20,14 +20,14 @@ public class JacketCreate {
 	
 
 	public static void main(String[] args) {
-		ArrayList<Jackets> jackets = JacketUtil.createJackets();
+		ArrayList<Jacket> jackets = JacketUtil.createJackets();
 		JacketUtil.printJackets(jackets);
 		System.out.println("---------------");
-		ArrayList<Jackets> JacketByName = JacketUtil.searchJacketByName(jackets, "NAME12");
+		ArrayList<Jacket> JacketByName = JacketUtil.searchJacketByName(jackets, "NAME12");
 		JacketUtil.printJackets(JacketByName);
 		
 		System.out.println("---------------");
-		ArrayList<Jackets> JacketByNameRegex = JacketUtil.searchJacketByNameRegex(jackets, "NAME4.*");
+		ArrayList<Jacket> JacketByNameRegex = JacketUtil.searchJacketByNameRegex(jackets, "NAME4.*");
 		JacketUtil.printJackets(JacketByNameRegex);
 		
 		}

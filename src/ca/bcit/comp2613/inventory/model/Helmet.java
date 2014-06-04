@@ -7,7 +7,7 @@ package ca.bcit.comp2613.inventory.model;
  * @author Andrew
  *
  */
-public class Helmets {
+public class Helmet {
 
 	private String id;
 	private String helModelName;
@@ -15,15 +15,19 @@ public class Helmets {
 	// serial numbers 12-34, int if 1234
 	private String helmetColour;
 	
-	public Helmets(){
+	public Helmet(){
 		
 	}
 	
-	public Helmets(String id, String helModelName, String helmetColour) {
+	public Helmet(String id, String helModelName, String helmetColour) {
 		super();
 		this.id = id;
 		this.helModelName = helModelName;
 		this.helmetColour = helmetColour;
+	}
+	
+	public enum Size{
+		SMALL, MEDIUM, LARGE
 	}
 	
 	
