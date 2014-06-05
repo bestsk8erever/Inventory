@@ -1,8 +1,10 @@
 package ca.bcit.comp2613.inventory.util;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import ca.bcit.comp2613.inventory.model.Helmet;
+import ca.bcit.comp2613.inventory.model.Helmet.Size;
 
 public class HelmetUtil {
 	
@@ -20,6 +22,7 @@ public class HelmetUtil {
 	public static ArrayList<Helmet> createHelmets() {
 		ArrayList<Helmet> retval = new ArrayList<>();
 		String[] strs = HELMET_NAMES.split("\\s");
+		Random random = new Random();
 	//	Helmet.Size[] helmets = { Helmet.Size.SMALL, Helmet.Size.MEDIUM, Helmet.Size.LARGE };
 	//	int countOfSizes = 0;
 		
@@ -30,6 +33,9 @@ public class HelmetUtil {
 			helmet.setId(Integer.toString(i));
 			helmet.setHelModelName(strs[i].toUpperCase());
 			helmet.setHelmetColour(new StringBuilder(strs[i]).reverse().toString());
+			
+			helmet.setHelmetSize(Size.values()[random.nextInt(Size.values().length)]);
+			
 			retval.add(helmet);
 //			Helmet.Size helmetSize = helmets[i];
 //			if (helmetSize == Helmet.Size.SMALL) {

@@ -11,6 +11,7 @@ public class Helmet {
 
 	private String id;
 	private String helModelName;
+	private Size size;
 	
 	// serial numbers 12-34, int if 1234
 	private String helmetColour;
@@ -54,11 +55,19 @@ public class Helmet {
 	public void setHelmetColour(String helmetColour) {
 		this.helmetColour = helmetColour;
 	}
+	
+	public Size getHelmetSize() {
+		return size;
+	}
+	
+	public void setHelmetSize(Size size) {
+		this.size = size;
+	}
 
 	@Override
 	public String toString() {
 		return "[ id = " + id + ", Helmet Name = " + helModelName
-				+ ", Helmet Colour = " + helmetColour + " ]";
+				+ ", Helmet Colour = " + helmetColour + " ] " + size;
 	}
 
 
