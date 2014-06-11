@@ -29,7 +29,7 @@ public class HelmetDriver {
 		System.out.println("---------------");
 		ArrayList<Helmet> HelmetByNameRegex = HelmetUtil.searchHelmetByNameRegex(helmets, "NAME3.*");
 		HelmetUtil.printHelmets(HelmetByNameRegex);
-		
+
 		}
 	}
 

@@ -2,6 +2,8 @@ package ca.bcit.comp2613.inventory.util;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Collections;
+import java.util.Comparator;
 
 import ca.bcit.comp2613.inventory.model.Helmet;
 import ca.bcit.comp2613.inventory.model.Helmet.Size;
@@ -28,6 +30,7 @@ public class HelmetUtil {
 		
 		
 		// create loop
+		
 		for (int i = 0; i < strs.length; i++) {
 			Helmet helmet = new Helmet();
 			helmet.setId(Integer.toString(i));
@@ -35,6 +38,7 @@ public class HelmetUtil {
 			helmet.setHelmetColour(new StringBuilder(strs[i]).reverse().toString());
 			
 			helmet.setHelmetSize(Size.values()[random.nextInt(Size.values().length)]);
+			Collections.sort(retval);
 			
 			retval.add(helmet);
 //			Helmet.Size helmetSize = helmets[i];
@@ -63,6 +67,7 @@ public class HelmetUtil {
 	public static void printHelmets(ArrayList<Helmet> helmets) {
 		for (Helmet helmet : helmets) {
 			System.out.println(helmet);
+			//comparableHelmet();
 		}
 	}
 
@@ -86,5 +91,17 @@ public class HelmetUtil {
 			 }
 		}
 		return retval;
+	}
+	
+	public static void comparableHelmet() {
+		ArrayList<Helmet> myList = new ArrayList<>();
+		Helmet helmets = new Helmet();
+		
+		myList.add(helmets);
+		Collections.sort(myList);
+		for (Helmet helmet : myList) {
+			System.out.println(helmet);
+		}
+		
 	}
 }

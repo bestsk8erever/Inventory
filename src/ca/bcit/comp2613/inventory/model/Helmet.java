@@ -3,11 +3,12 @@
  */
 package ca.bcit.comp2613.inventory.model;
 
+
 /**
  * @author Andrew
  *
  */
-public class Helmet {
+public class Helmet implements Comparable<Helmet> {
 
 	private String id;
 	private String helModelName;
@@ -62,6 +63,14 @@ public class Helmet {
 	
 	public void setHelmetSize(Size size) {
 		this.size = size;
+	}
+	
+	public int compareTo(Helmet o) {
+		int retval = this.getHelModelName().compareTo(o.getHelModelName());
+		if (retval == 0) {
+			retval = this.getHelmetColour().compareTo(o.getHelmetColour());
+		}
+		return retval;
 	}
 
 	@Override
