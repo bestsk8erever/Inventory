@@ -8,6 +8,8 @@ import java.util.Comparator;
 import ca.bcit.comp2613.inventory.model.Helmet;
 import ca.bcit.comp2613.inventory.model.Helmet.Size;
 
+
+
 public class HelmetUtil {
 	
 	public static String HELMET_NAMES = "Name1 Name2 Name3 Name4 Name5 Name6 Name7 Name8 Name9 Name10 "
